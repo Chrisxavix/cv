@@ -109,17 +109,36 @@ p {
     left: 0;
     bottom: var(--header-height);
     width: 100%;
-  /* 
-  
-  
-  
-  display: flex;
-  flex-direction: column;
-  background-color: var(--second-color);
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.5s ease; */
+    display: flex;
+    flex-direction: column;
+    background-color: var(--second-color);
+    /* Opacity oculta los items del nav, para luego ser activados con javaScript */
+    opacity: 0;
+    /* Pointer-events desactiva el efecto de la manito en enlaces */
+    pointer-events: none;
+    transition: opacity 0.5s ease;
 }
+
+.menu a {
+    padding: 1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: var(--first-color); 
+}
+
+/* Esta clase se va a activar con javaScript para que aparezca los items, y se active la manito */
+.menu.is-active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.menu a:hover {
+    color: var(--white-color);
+    background-color: var(--first-color);
+}
+
 /* ******************** Utilities ******************** */
 /* el box-shadow es para las sombras de las cajas */
 .box-shadow-1 {
@@ -137,7 +156,6 @@ p {
 }
 
 /* ******************** Site Style ******************** */
-
 .header {
     position: fixed;
     left: 0;
