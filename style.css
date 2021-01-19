@@ -93,12 +93,26 @@ p {
 
 /* ******************** Components ******************** */
 /* ********** Menu ********** */
+.menu-btn {
+    outline: thin solid var(--first-color);
+    border: 0;
+    cursor: pointer;
+    background-color: var(--second-color);
+}
+  
+.menu-btn svg {
+    fill: var(--first-color);
+}
+
 .menu {
-    display: none;
-  /* position: fixed;
-  left: 0;
-  bottom: var(--header-height);
-  width: 100%;
+    position: fixed;
+    left: 0;
+    bottom: var(--header-height);
+    width: 100%;
+  /* 
+  
+  
+  
   display: flex;
   flex-direction: column;
   background-color: var(--second-color);
@@ -121,6 +135,7 @@ p {
 .none {
     display: none;
 }
+
 /* ******************** Site Style ******************** */
 
 .header {
