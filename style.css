@@ -1,5 +1,4 @@
-/* ******************** Custom Properties ******************** */
-/* ******************** Propiedades personalizadas ******************** */
+/* **************************************** CUSTOM PROPERTIES **************************************** */
 :root {
     --first-color: #d90062;
     --first-alpha-color: rgba(217, 0, 98, 0.75);
@@ -21,8 +20,9 @@
     --max-width: 1200px;
     --header-height: 4rem;
 }
+/* **************************************** CUSTOM PROPERTIES **************************************** */
 
-/* ******************** Reset ******************** */
+/* **************************************** RESET **************************************** */
 html {
     box-sizing: border-box;
     font-family: var(--font);
@@ -90,9 +90,10 @@ img {
 p {
     line-height: 1.6;
 }
+/* **************************************** RESET **************************************** */
 
-/* ******************** Components ******************** */
-/* ********** Menu ********** */
+/* **************************************** COMPONENTS **************************************** */
+/* ------------------------- MENU PARA MOVIL ------------------------- */
 .menu-btn {
     outline: thin solid var(--first-color);
     border: 0;
@@ -138,8 +139,39 @@ p {
     color: var(--white-color);
     background-color: var(--first-color);
 }
+/* ------------------------- MENU PARA MOVIL ------------------------- */
 
-/* ******************** Utilities ******************** */
+/* ------------------------- MENU PARA ESCRITORIO ------------------------- */
+@media screen and (min-width: 1024px) {
+    /* Quitamos el botón de móvil, las barras y la x */
+    .menu-btn {
+        display: none;
+    }
+
+    .menu {
+        position: static;
+        width: auto;
+        flex-direction: row;
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .menu a {
+        padding: 0 1rem;
+    }
+
+    .menu a:hover {
+        background-color: transparent;
+    }
+
+    .menu a:last-child {
+        padding-right: 0;
+    }
+}
+/* ------------------------- MENU PARA ESCRITORIO ------------------------- */
+/* **************************************** COMPONENTS **************************************** */
+
+/* **************************************** UTILITIES **************************************** */
 /* el box-shadow es para las sombras de las cajas */
 .box-shadow-1 {
     box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.25);
@@ -154,8 +186,9 @@ p {
 .none {
     display: none;
 }
+/* **************************************** UTILITIES **************************************** */
 
-/* ******************** Site Style ******************** */
+/* **************************************** SITE STYLES **************************************** */
 .header {
     position: fixed;
     left: 0;
@@ -179,3 +212,90 @@ p {
     font-size: 2rem;
     text-decoration: none;
 }
+
+/* ------------------------- ESTILOS PARA TABLETS ------------------------- */
+@media screen and (min-width: 768px) {
+  /* .contact-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 48%);
+    justify-content: space-between;
+  }
+
+  .portfolio > .container {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+  }
+
+  .portfolio .section-title {
+    grid-column: span 2;
+  }
+
+  .portfolio-modal {
+    max-width: 800px;
+    flex-direction: row;
+  }
+
+  .portfolio-info {
+    margin-left: 1rem;
+    align-self: center;
+  }
+
+  .services > .container {
+    display: grid;
+    grid-template-columns: repeat(2, 45%);
+    justify-content: space-between;
+    align-content: center;
+  }
+
+  .services .section-title {
+    grid-column: span 2;
+  } */
+}
+/* ------------------------- ESTILOS PARA TABLETS ------------------------- */
+
+/* ------------------------- ESTILOS PARA ORDENADOR ------------------------- */
+/* Para pantallas de Ordenadores */
+@media screen and (min-width: 1024px) {
+    .header {
+        position: sticky;
+        /* COn Stycky se coloca en donde queremos, por ello el top 0, para que esté en el incio */
+        top: 0;
+        padding: 0.5rem;
+        height: calc(var(--header-height) - 0.5rem);
+    }
+
+  /* .about {
+    display: grid;
+    grid-template-columns: repeat(3, 30%);
+    justify-content: space-between;
+    align-content: center;
+  }
+
+  .contact-cards {
+    grid-template-columns: repeat(4, 24%);
+  }
+
+  .footer {
+    margin-bottom: 0;
+  }
+
+  
+
+  .portfolio > .container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .portfolio .section-title {
+    grid-column: span 3;
+  }
+
+  .services > .container {
+    grid-template-columns: repeat(3, 30%);
+  }
+
+  .services .section-title {
+    grid-column: span 3;
+  } */
+}
+/* ------------------------- ESTILOS PARA ORDENADOR ------------------------- */
+/* **************************************** SITE STYLES **************************************** */
