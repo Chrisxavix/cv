@@ -15,6 +15,7 @@
     --title-color: #333;
     --text-color: #222;
     --white-alpha-color: rgba(255, 255, 255, 0.5);
+    /* Tener presente el --black-alpha-color, ya que maneja el control de opacidad con el 0.5, lo cual se ve afectado en la variable de opacidad en el html del home con el fondo. Si se quiere mandar otro colo de opacidad es seguir el formato de --black-alpha-color: rgba(0, 0, 0, 0.5); */
     --black-alpha-color: rgba(0, 0, 0, 0.5);
     --font: "Raleway", sans-serif;
     --max-width: 1200px;
@@ -93,6 +94,32 @@ p {
 /* **************************************** RESET **************************************** */
 
 /* **************************************** COMPONENTS **************************************** */
+/* ------------------------- HERO IMAGE ------------------------- */
+.hero-image {
+  /* variables --image y --attachment son declaradas en el html con style */
+  background-image: var(--hero-image);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: var(--hero-attachment);
+}
+
+.hero-image-opacity {
+  width: 100%;
+  min-height: 91vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: var(--hero-opacity-color); 
+}
+
+.hero-image-title {
+  font-size: 7.5vw;
+  color: var(--hero-text-color);
+}
+/* ------------------------- HERO IMAGE ------------------------- */
+
 /* ------------------------- MENU PARA MOVIL ------------------------- */
 .menu-btn {
     outline: thin solid var(--first-color);
@@ -175,6 +202,18 @@ p {
 /* el box-shadow es para las sombras de las cajas */
 .box-shadow-1 {
     box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.25);
+}
+
+.btn {
+  border-radius: 0.5rem;
+  padding: 1rem;
+  display: inline-block;
+  width: 200px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: var(--white-color);
+  background-color: var(--first-color);
 }
 
 .container {
