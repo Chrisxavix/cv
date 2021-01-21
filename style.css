@@ -293,7 +293,7 @@ progress::-moz-progress-bar {
 
   /* Para dar espacios entre las secciones entre el inicio y acerca*/
   .sectionAbout {
-    padding: 5rem 1rem;
+    padding: 3.6rem 1rem;
   }
 
   .text-lg-center {
