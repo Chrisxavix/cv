@@ -94,7 +94,7 @@ p {
 /* **************************************** RESET **************************************** */
 
 /* **************************************** COMPONENTS **************************************** */
-/* ------------------------- HERO IMAGE ------------------------- */
+/* ------------------------- COMPONENTS: HERO IMAGE ------------------------- */
 .hero-image {
   /* variables --image y --attachment son declaradas en el html con style */
   background-image: var(--hero-image);
@@ -118,9 +118,9 @@ p {
   font-size: 7.5vw;
   color: var(--hero-text-color);
 }
-/* ------------------------- HERO IMAGE ------------------------- */
+/* ------------------------- COMPONENTS: HERO IMAGE ------------------------- */
 
-/* ------------------------- MENU PARA MOVIL ------------------------- */
+/* ------------------------- COMPONENTS: MENU PARA MOVIL ------------------------- */
 .menu-btn {
     outline: thin solid var(--first-color);
     border: 0;
@@ -166,9 +166,9 @@ p {
     color: var(--white-color);
     background-color: var(--first-color);
 }
-/* ------------------------- MENU PARA MOVIL ------------------------- */
+/* ------------------------- COMPONENTS: MENU PARA MOVIL ------------------------- */
 
-/* ------------------------- MENU PARA ESCRITORIO ------------------------- */
+/* ------------------------- COMPONENTS: MENU PARA ESCRITORIO ------------------------- */
 @media screen and (min-width: 1024px) {
     /* Quitamos el botón de móvil, las barras y la x */
     .menu-btn {
@@ -195,7 +195,43 @@ p {
         padding-right: 0;
     }
 }
-/* ------------------------- MENU PARA ESCRITORIO ------------------------- */
+/* ------------------------- COMPONENTS: MENU PARA ESCRITORIO ------------------------- */
+
+/* ------------------------- COMPONENTS: PROGRESS BAR ------------------------- */
+
+progress {
+  width: 100%;
+  height: 1rem;
+  background-color: var(--gray-color);
+}
+
+progress::-webkit-progress-bar {
+  /* La barra para llegar al 100, del color gris */
+  background-color: var(--gray-color);
+}
+
+progress::-webkit-progress-value {
+  /* EL color del porcentaje marcado */
+  background-color: var(--gray-dark-color);
+}
+
+/* Para que agarre color en firefox el value */
+progress::-moz-progress-bar {
+  background-color: var(--gray-dark-color);
+}
+
+.progress {
+  margin: 1rem auto;
+}
+
+/* hijos directos de progress que llevan p (>) */
+.progress > p {
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+}
+/* ------------------------- COMPONENTS: PROGRESS BAR ------------------------- */
 /* **************************************** COMPONENTS **************************************** */
 
 /* **************************************** UTILITIES **************************************** */
@@ -222,8 +258,45 @@ p {
     max-width: var(--max-width);
 }
 
+/* Grises en la foto */
+.gray-scale {
+  filter: grayscale(1);
+}
+
+/* Para que aparezca o no los iconos del menu en el móvil */
 .none {
     display: none;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+@media screen and (min-width: 1024px) {
+  /* .full-lg-screen {
+    width: 100%;
+    min-height: 100vh;
+  } */
+
+  .text-lg-center {
+    text-align: center;
+  }
+
+  .text-lg-left {
+    text-align: left;
+  }
+
+  .text-lg-right {
+    text-align: right;
+  }
 }
 /* **************************************** UTILITIES **************************************** */
 
