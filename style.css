@@ -268,6 +268,11 @@ progress::-moz-progress-bar {
     display: none;
 }
 
+/* Para dar espacios entre las secciones entre el inicio y acerca*/
+.section {
+  padding: 2rem 1rem;
+}
+
 .text-center {
   text-align: center;
 }
@@ -281,10 +286,15 @@ progress::-moz-progress-bar {
 }
 
 @media screen and (min-width: 1024px) {
-  /* .full-lg-screen {
+  .full-lg-screen {
     width: 100%;
     min-height: 100vh;
-  } */
+  }
+
+  /* Para dar espacios entre las secciones entre el inicio y acerca*/
+  .sectionAbout {
+    padding: 5rem 1rem;
+  }
 
   .text-lg-center {
     text-align: center;
@@ -301,6 +311,11 @@ progress::-moz-progress-bar {
 /* **************************************** UTILITIES **************************************** */
 
 /* **************************************** SITE STYLES **************************************** */
+/* Espacio entre descargar cv y la foto en móvil */
+.about > article {
+  margin-bottom: 2rem;
+}
+
 .header {
     position: fixed;
     left: 0;
@@ -370,19 +385,21 @@ progress::-moz-progress-bar {
 @media screen and (min-width: 1024px) {
     .header {
         position: sticky;
-        /* COn Stycky se coloca en donde queremos, por ello el top 0, para que esté en el incio */
+        /* Con Stycky se coloca en donde queremos, por ello el top 0, para que esté en el incio */
         top: 0;
         padding: 0.5rem;
         height: calc(var(--header-height) - 0.5rem);
     }
 
-  /* .about {
-    display: grid;
-    grid-template-columns: repeat(3, 30%);
-    justify-content: space-between;
-    align-content: center;
-  }
+    /* Para la sección de acerca en pantallas grandes se aplica grid de tres columnas. */
+    .about {
+        display: grid;
+        grid-template-columns: repeat(3, 30%);
+        justify-content: space-between;
+        align-content: center;
+    }
 
+  /* 
   .contact-cards {
     grid-template-columns: repeat(4, 24%);
   }
