@@ -252,6 +252,11 @@ progress::-moz-progress-bar {
   background-color: var(--first-color);
 }
 
+/* Para el fondo en los servicios */
+.bg-gray-light {
+  background-color: var(--gray-light-color);
+}
+
 .container {
     margin-left: auto;
     margin-right: auto;
@@ -271,6 +276,17 @@ progress::-moz-progress-bar {
 /* Para dar espacios entre las secciones entre el inicio y acerca*/
 .section {
   padding: 2rem 1rem;
+}
+
+/* Colores de los titulos, como servicios */
+.section-title {
+  border-top: thin solid var(--first-color);
+  border-bottom: thin solid var(--first-color);
+  margin: 2rem auto;
+  padding: 0.5rem 1rem;
+  width: 250px;
+  text-align: center;
+  color: var(--title-color);
 }
 
 .text-center {
@@ -340,6 +356,23 @@ progress::-moz-progress-bar {
     text-decoration: none;
 }
 
+/* Estilos de las tarjetas de servicio */
+.service-card {
+  margin: 1rem auto;
+  padding: 1rem;
+  text-align: center;
+}
+
+.service-card h3 {
+  color: var(--title-color);
+}
+
+.service-card svg {
+  margin-bottom: 1.25rem;
+  fill: var(--first-color);
+  height: 50px;
+  width: 50px;
+}
 /* ------------------------- ESTILOS PARA TABLETS ------------------------- */
 @media screen and (min-width: 768px) {
   /* .contact-cards {
@@ -366,17 +399,18 @@ progress::-moz-progress-bar {
     margin-left: 1rem;
     align-self: center;
   }
-
-  .services > .container {
+*/
+.services > .container {
     display: grid;
     grid-template-columns: repeat(2, 45%);
     justify-content: space-between;
     align-content: center;
-  }
+}
 
-  .services .section-title {
+.services .section-title {
     grid-column: span 2;
-  } */
+}
+
 }
 /* ------------------------- ESTILOS PARA TABLETS ------------------------- */
 
@@ -417,14 +451,18 @@ progress::-moz-progress-bar {
   .portfolio .section-title {
     grid-column: span 3;
   }
+*/
+    .services > .container {
+        display: grid;
+        grid-template-columns: repeat(3, 30%);
+        justify-content: space-between;
+        align-content: center;
+    }
 
-  .services > .container {
-    grid-template-columns: repeat(3, 30%);
-  }
+    .services .section-title {
+        grid-column: span 3;
+    }
 
-  .services .section-title {
-    grid-column: span 3;
-  } */
 }
 /* ------------------------- ESTILOS PARA ORDENADOR ------------------------- */
 /* **************************************** SITE STYLES **************************************** */
