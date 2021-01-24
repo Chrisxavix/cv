@@ -182,7 +182,8 @@ p {
     background-color: var(--black-alpha-color);
     opacity: 0;
     pointer-events: none;
-    transition: all 1s;
+    /* Segundos para abrir el modal con transición */
+    transition: all 0.3s;
 }
 
 .modal-content {
@@ -437,31 +438,31 @@ progress::-moz-progress-bar {
   pointer-events: auto;
 }
 
-/* 
 .portfolio-modal {
-  padding: 1rem;
-  max-width: 400px;
-  display: flex;
-  flex-direction: column;
-  background-color: var(--white-color);
+    padding: 1rem;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    background-color: var(--white-color);
 }
 
 .portfolio-modal h3 {
-  border-bottom: medium solid var(--first-color);
-  margin: 1rem auto;
-  padding: 0.5rem 0;
-  color: var(--title-color);
+    border-bottom: medium solid var(--first-color);
+    margin: 1rem auto;
+    padding: 0.5rem 0;
+    color: var(--title-color);
 }
 
 .portfolio-details {
-  display: grid;
-  grid-template-columns: 40% 60%;
-  grid-auto-rows: 2rem;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-auto-rows: 2rem;
 }
 
 .portfolio-details b {
-  color: var(--first-color);
-} */
+    color: var(--first-color);
+} 
 
 /* Estilos de las tarjetas de servicio */
 .service-card {
@@ -498,18 +499,18 @@ progress::-moz-progress-bar {
         grid-column: span 2;
     }
 
-    /* 
-
+    /* Para abrir el modal con información, al estar declarado para tablets no hace falta hacerlo para escritorio */
     .portfolio-modal {
-      max-width: 800px;
-      flex-direction: row;
+        max-width: 800px;
+        flex-direction: row;
     }
 
     .portfolio-info {
-      margin-left: 1rem;
-      align-self: center;
+        margin-left: 1rem;
+        align-self: center;
     }
-*/
+    /* Para abrir el modal con información, al estar declarado para tablets no hace falta hacerlo para escritorio */
+
     .services > .container {
         display: grid;
         grid-template-columns: repeat(2, 45%);
