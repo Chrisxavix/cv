@@ -95,6 +95,25 @@ p {
 
 /* **************************************** COMPONENTS **************************************** */
 /* ------------------------- COMPONENTS: CAROUSEL ------------------------- */
+/* animación automática */
+@keyframes carousel-slide {
+    0% {
+        transform: translateX(0%);
+    }
+
+    25% {
+        transform: translateX(-25%);
+    }
+
+    50% {
+        transform: translateX(-50%);
+    }
+
+    75% {
+        transform: translateX(-75%);
+    }
+}
+/* animación automática */
 .carousel {
     margin: 2rem auto;
     padding: 2rem 0;
@@ -131,9 +150,8 @@ p {
     /* 100% por cada slide, cuando se quiere agregar o disminuir */
     width: 400%;
     display: flex;
-
     transition: transform 0.5s ease-in-out;
-    /* animation: carousel-slide 12s ease-in-out 3s; */
+    animation: carousel-slide 12s ease-in-out 3s;
 }
 
 #slide-1:checked ~ .slides {
@@ -152,43 +170,13 @@ p {
     transform: translateX(-75%);
 }
 
-/* Para que los botones de checked se seleccinen */
+/* Para que los botones de checked se seleccionen */
 #slide-1:checked ~ .slides-nav label#dot-1,
 #slide-2:checked ~ .slides-nav label#dot-2,
 #slide-3:checked ~ .slides-nav label#dot-3,
 #slide-4:checked ~ .slides-nav label#dot-4 {
     background-color: var(--gray-dark-color);
 }
-
-/* @keyframes carousel-slide {
-  0% {
-    transform: translateX(0%);
-  }
-
-  25% {
-    transform: translateX(-25%);
-  }
-
-  50% {
-    transform: translateX(-50%);
-  }
-
-  75% {
-    transform: translateX(-75%);
-  }
-}
-
-
-
-
-
-
-
-
-
-
-
- */
 /* ------------------------- COMPONENTS: CAROUSEL ------------------------- */
 
 /* ------------------------- COMPONENTS: HERO IMAGE ------------------------- */
