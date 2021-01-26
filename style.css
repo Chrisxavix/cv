@@ -198,6 +198,7 @@ p {
   width: 100%;
 }
 
+/* Aplicar la misma fuente a los input y textarea */
 .contact-form input,
 .contact-form textarea {
   font-size: 0.85rem;
@@ -215,58 +216,63 @@ p {
   resize: none;
 }
 
+/* Clase con selector de atributos */
 .contact-form input[type="submit"] {
-  /* margin-top: 0;
+  margin-top: 0;
   cursor: pointer;
-  transition: all 0.5s ease-out; */
+  transition: all 0.5s ease-out;
 }
 
+/* Clase con selector de atributos con hover */
 .contact-form input[type="submit"]:hover {
-  /* opacity: 0.75; */
+  opacity: 0.75;
 }
 
 .contact-form *::placeholder {
-  /* color: var(--gray-dark-color); */
+  color: var(--gray-dark-color);
 }
 
+/* El diseño del modal, después de eviar por correo */
 .contact-form-response {
-  /* padding: 1rem;
+  padding: 1rem;
   width: 400px;
   text-align: center;
-  background-color: var(--white-color); */
-}
-.contact-form-response svg {
-  /* margin-top: 2rem;
-  width: 4rem;
-  height: 4rem;
-  fill: var(--first-color); */
+  background-color: var(--white-color);
 }
 
+/* Diseño del svg del modal */
+.contact-form-response svg {
+  margin-top: 2rem;
+  width: 4rem;
+  height: 4rem;
+  fill: var(--first-color);
+}
+
+/* Activar el modal de gracias */
 .modal#gracias:target {
-  /* opacity: 1;
-  pointer-events: auto; */
+  opacity: 1;
+  pointer-events: auto;
 }
 
 @media screen and (min-width: 1024px) {
   .contact-form {
-    /* display: grid;
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
-    column-gap: 1rem; */
+    column-gap: 1rem;
   }
 
   .contact-form input,
   .contact-form textarea {
-    /* font-size: 1rem; */
+    font-size: 1rem;
   }
 
+  /* Darle dos expacios con span para que ocupe las dos columnas */
   .contact-form textarea,
-  .contact-form-loader {
-    /* grid-column: span 2; */
+  .contact-form-loader,
+  .button-form-submint {
+    grid-column: span 2;
   }
 
-  .contact-form input[type="submit"] {
-    /* margin-left: 0; */
-  }
 }
 /* ------------------------- COMPONENTS: CONTACT ------------------------- */
 
