@@ -712,6 +712,14 @@ progress::-moz-progress-bar {
   height: 1.5rem;
 }
 
+.footer {
+  margin-bottom: var(--header-height);
+  padding: 0.5rem; 
+  text-align: center;
+  color: var(--white-color);
+  background-color: var(--third-color);
+}
+
 /* ------------------------- ESTILOS PARA TABLETS ------------------------- */
 @media screen and (min-width: 768px) {
     .contact-cards {
@@ -780,11 +788,11 @@ progress::-moz-progress-bar {
         justify-content: space-between;
     }
 
-  /* 
+  
   .footer {
     margin-bottom: 0;
   }
-  */
+ 
 
     .portfolio > .container {
       grid-template-columns: repeat(3, 1fr);
